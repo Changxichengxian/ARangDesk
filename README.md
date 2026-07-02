@@ -30,6 +30,16 @@
 
 注意：程序本体不会只剩一个 `整理桌面.cmd`。这个 `.cmd` 还需要同目录下的 `organize_desktop.ps1`。安装脚本会自动把这两个文件放到 `%LOCALAPPDATA%\ARangDesk`，桌面上只保留快捷方式。
 
+## 完全删除
+
+ARangDesk 不会添加开机启动，也不会写注册表。要完全去除，删掉这些就可以：
+
+1. 桌面上的 `整理桌面` 快捷方式。
+2. `%LOCALAPPDATA%\ARangDesk` 文件夹。
+3. 如果装过早期测试版，也删掉 `%LOCALAPPDATA%\DeskARanger` 文件夹。
+
+找不到 `%LOCALAPPDATA%` 时，可以打开文件资源管理器，在地址栏输入 `%LOCALAPPDATA%` 后回车。
+
 ## 预览
 
 运行 `preview_organize_desktop.cmd` 可以只查看将要排列的位置，不会移动图标。
