@@ -1,10 +1,22 @@
-# 整理桌面
+# ARangDesk
 
 一个 Windows 桌面图标整理脚本：快捷方式和常用文件夹排在左侧，普通文件排在右侧。
 
+## 下载后怎么装
+
+从 GitHub 下载 ZIP 后，先解压，再双击 `install_shortcut.cmd`。
+
+安装脚本会把必要文件复制到：
+
+```text
+%LOCALAPPDATA%\ARangDesk
+```
+
+然后在当前用户真实的桌面目录创建 `整理桌面.lnk`。安装完成后，下载的 ZIP 和解压出来的文件夹都可以删除。
+
 ## 使用
 
-双击 `整理桌面.cmd`，整理完成后会显示：
+双击桌面上的 `整理桌面` 快捷方式，整理完成后会显示：
 
 ```text
 本次整理已完成。按空格或者 Enter 键取消这次更改；按其他键退出。
@@ -14,7 +26,9 @@
 
 ## 安装桌面快捷方式
 
-运行 `install_shortcut.cmd` 会在当前用户真实的桌面目录创建 `整理桌面.lnk`。这会使用 Windows 返回的桌面路径，所以桌面在 `C:\Users\用户名\Desktop`、OneDrive 桌面或其他重定向位置都可以。
+运行 `install_shortcut.cmd` 会使用 Windows 返回的桌面路径，所以桌面在 `C:\Users\用户名\Desktop`、OneDrive 桌面或其他重定向位置都可以。
+
+注意：程序本体不会只剩一个 `整理桌面.cmd`。这个 `.cmd` 还需要同目录下的 `organize_desktop.ps1`。安装脚本会自动把这两个文件放到 `%LOCALAPPDATA%\ARangDesk`，桌面上只保留快捷方式。
 
 ## 预览
 
